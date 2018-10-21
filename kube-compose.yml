@@ -1,5 +1,9 @@
 version: '3.3'
 
 services:
-  hello:
-    image: helloworld
+  web:
+    image: dockerdemos/lab-web
+    volumes:
+     - "./web/static:/static"
+    ports:
+     - "9999:80"
