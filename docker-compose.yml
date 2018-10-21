@@ -1,0 +1,18 @@
+version: '3.3'
+
+services:
+  jenkins:
+    # contains embedded docker client & blueocean plugin
+    image: jenkinsci/blueocean:latest
+    user: root
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    volumes:
+      - ./jenkins_home:/var/jenkins_home
+      # run Docker from the host system when the container calls it. Note, Docker is stll 
+      # required in the jenkins container
+      - /var/run/docker.sock:/var/run/docker.sock
+      # root of simple project
+      - .:/home/project
+    container_name: jenkins
