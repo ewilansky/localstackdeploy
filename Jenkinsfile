@@ -2,7 +2,8 @@ node {
     checkout scm
     
     stage ('Deploy To Kube') {
-        docker.withServer('tcp://docker.for.mac.localhost:1234') {
+        docker.withServer('unix:///var/run/docker.sock') {
+        // docker.withServer('tcp://docker.for.mac.localhost:1234') {
             sh 'echo Working on deploy to Kubernetes Cocker CE integration w/Kuberneses orchestration'
             sh 'docker stack deploy app --compose-file /home/project/kube-compose.yml'
         }
