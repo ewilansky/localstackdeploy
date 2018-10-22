@@ -23,6 +23,6 @@ This is a small test of stack deploy from Jenkins running in a container and cal
 Follow this stackoverflow post for testing two scenarios:
 
 - running docker stack deploy from the docker host
-- running stack deploy from the Jenkins container:
+- running stack deploy from the Jenkins container
 
 https://stackoverflow.com/questions/52920540/it-is-possible-to-to-call-docker-stack-deploy-on-a-docker-host-from-within-a-jen
