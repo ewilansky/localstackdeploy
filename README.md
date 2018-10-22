@@ -2,11 +2,11 @@
 
 ## (two scenarios)
 
-This is a small test of stack deploy from Jenkins running in a container and calling docker stack deploy command on a docker host. It doesn't work when called from Jenkins using the 
+This is a small test of stack deploy from Jenkins running in a container and calling docker stack deploy command on a docker host. It doesn't work when called from Jenkins and using the Jenkins Docker plugin.
 
 ## Requirements
 
-1. You must have at least Docker CE installed and it must include Kubernetes integration . I'm using version 18.06.1-ce-mac73 (26764).
+1. You must have at least Docker CE installed and it must include Kubernetes integration. I'm using version 18.06.1-ce-mac73 (26764).
 2. Enable Kubernetes from Docker > Preferences > Kubernetes > Enable Kubernetes checkbox then select Kubernetes for the Orchestration type.
 3. Clone this repo.
 
